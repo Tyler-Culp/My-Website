@@ -48,8 +48,10 @@
 
                 <label for="title">What is your title:</label>
                 <select name="title" id="title">
-                    <option value="employer">Employer</option>
-                    <option value="recruiter">Recruiter</option>
+                    <optgroup id="Work">
+                        <option value="employer">Employer</option>
+                        <option value="recruiter">Recruiter</option>
+                    </optgroup>
                     <option value="other">Other</option>
                 </select>
                 <br><br>
@@ -58,14 +60,10 @@
                 <input list="animals_list" name="favorite_animal" id="favorite_animal">
                 
                 <datalist id="animals_list">
-                    <optgroup label="House Pets">
-                        <option value="Dog">Dog</option>
-                        <option value="Cat">Cat</option>
-                    </optgroup>
-                    <optgroup id="Not House Pets">
-                        <option value="Fish">Fish</option>
-                        <option value="Bird">Bird</option>
-                    </optgroup>
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Fish">Fish</option>
+                    <option value="Bird">Bird</option>
                 </datalist>
                 <br><br>
                 <input type="submit" value="Submit">
