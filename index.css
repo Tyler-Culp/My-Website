@@ -1,0 +1,131 @@
+:root {
+    --color-header: hsl(20, 6%, 41%);
+    --color-left-sidebar: hsl(225, 70%, 72%);
+    --color-right-sidebar: hsl(225, 70%, 72%);
+    --color-main: hsl(202, 14%, 85%);
+    --color-footer: hsl(20, 6%, 41%);
+    --color-text: hsl(0, 0%, 100%);
+    --font: sans-serif "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+  }
+
+* {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: var(--font);
+}
+
+body {
+    background-color: darkgrey;
+    height: 100vh;
+    vertical-align: middle;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+
+a:hover {
+    transform: scale(1.2);
+}
+
+.firstRow {
+    display: grid;
+    grid-column: 1fr 1fr 1fr 1fr;
+}
+
+#firstP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 3;
+    
+}
+
+#selfPicture {
+    grid-column: 3 / 4;
+    /* border: solid; */
+    /* border-width: 5px;
+    border-color: white; */
+
+}
+
+#secondP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    padding: .75rem;
+}
+
+p {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: .5rem;
+}
+
+#author {
+    transform: translateY(.4in);
+}
+
+@media screen and (max-width: 640px) {
+    * {
+        margin: 0;
+        font-size: 1rem;
+        font-family: var(--font);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1rem;
+    }
+    
+    a {
+        color: white;
+        text-decoration: none;
+        transition: transform 0.2s;
+      }
+    
+    a:hover {
+        transform: scale(1.2);
+    }
+
+    p {
+        padding: .3rem
+    }
+
+    #author {
+        transform: translateY(.1in);
+    }
+
+  }
