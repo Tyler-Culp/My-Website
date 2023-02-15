@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1000">
     <title>Document</title>
+    <link rel="stylesheet" href="projects.css">
 </head>
 <body>
     <h1>Projects</h1>
-    <hr>
     <nav>
-        <ul>
+        <!-- <ul>
             <li>
                 <a href="index.html">About</a>
             </li>
@@ -26,10 +27,14 @@
             <li>
                 <a href="miscellaneous.html">Miscellaneous</a>
             </li>
-        </ul>
+        </ul> -->
+        <a href="index.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
     </nav>
     <main>
-        <p>A list of some projects I have done over the last year or so. Here is my <a rel="noopener" href="https://github.com/Tyler-Culp?tab=repositories" target="_blank">Github</a> in case you would like
+        <p>A list of some projects I have done over the last year or so. Here is my <a id="gitLink" rel="noopener" href="https://github.com/Tyler-Culp?tab=repositories" target="_blank">Github</a> in case you would like
             to see the source code for a few projects.</p>
 
         <aside>
@@ -38,30 +43,42 @@
                 <p>Note: all projects source code will be there as some repositories are private for academic integrity purposes.</p>
             </details>
         </aside>
-        <br>
         <ol>
             <li><p><b>Marvel Movie Success Predictor</b></p>
-            <p>In this project I worked with a team of 5 other people where we tried to discover if there was a way to predict the success of a
+            <p class="listP">In this project I worked with a team of 5 other people where we tried to discover if there was a way to predict the success of a
                  marvel movie, both critically and commercially, based on general movie statistics like its run time, budget, year released, etc. 
                  This was mainly done with python inside of Jupyter Notebooks where we used libraries like pandas, numpy, patsy, statsmodels, etc.
                  Through this project we found that things like production budget did have a positive correlation with the success of the movie.</p></li>
             <li><p><b>Top Spotify Songs</b></p>
-                <p>This was a project I worked on last Summer where I attempted to make a Spotify web application that would allow a user to log into
-                    their spotify account and then show what their top songs are for all time on the platform. Below is an example of what the page looks like:
+                <p class="listP">This was a project I worked on last Summer where I attempted to make a Spotify web application that would allow a user to log into
+                    their spotify account and then show what their top songs are for all time on the platform. It would also allow you to view main profile
+                    features like number of playlists or number of friends on the app.
                 </p>
-                <figure>
-                    <img src="spotify_ss2.png" alt="Home page" width="400" height="500">
-                    <figcaption>List of top songs the web app shows after log in</figcaption>
-                </figure>
             </li>
-            <li>
-                <p>Some third project, haven't decided what to put here yet though.</p>
+            <li><p><b>MineSweeper</b></p>
+                <p class="listP">A fun little pet project which recreates MineSweeper fully using java code. It allows you to play the game from within the computer's terminal.
+                    Doesn't do too much other than that, but can be a fun little time killer.
+                </p>
             </li>
         </ol>
         <br>
+        <div id="pictures">
+            <figure>
+                <img src="dataScienceProject.webp" alt="Statistical modeling done in the project" width="300" height="300">
+                <figcaption>Modeling done to help us make our predictions</figcaption>
+            </figure>
+            <figure>
+                <img src="spotify_code.webp" alt="Log in function" width="350" height="300">
+                <figcaption>The code for logging into Spotify account</figcaption>
+            </figure>
+            <figure>
+                <img src="ms_ss.webp" alt="MineSweeper in the terminal" width="300" height="300">
+                <figcaption>The code allows you to play minesweeper in a terminal</figcaption>
+            </figure>
+        </div>
     </main>
     <footer>
-        <p>Author: Tyler Culp</p>
+        <p id="author">Author: Tyler Culp</p>
         <p>Contact: <a href="mailto:tculp@ucsd.edu">tculp@ucsd.edu</a></p>
     </footer>
 </body>

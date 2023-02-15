@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <h1>Contact</h1>
-    <hr>
     <nav>
-        <ul>
+        <!-- <ul>
             <li>
                 <a href="index.html">About</a>
             </li>
@@ -26,14 +26,18 @@
             <li>
                 <a href="miscellaneous.html">Miscellaneous</a>
             </li>
-        </ul>
+        </ul> -->
+        <a href="index.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
     </nav>
 
     <main>
         <p>Thanks so much for wanting to contact me! Below is a contact form so that I can get in touch with you easier.</p>
         <form action="contact.html" method="post">
             <fieldset>
-                <legend><b>Contact Form</b></legend>
+                <legend>Content Form</legend>
                 <label for="Name">Name:</label>
                 <input type="text" id="Name">
                 <br><br>
@@ -43,7 +47,7 @@
                 <br><br>
 
                 <label for="contact_reason">Reason for Contacting:</label>
-                <textarea id="contact_reason" name="contact_reason" rows="4" cols="50"></textarea>
+                <input type="text" id="contact_reason" name="contact_reason">
                 <br><br>
 
                 <label for="title">What is your title:</label>
@@ -66,19 +70,24 @@
                     <option value="Bird">Bird</option>
                 </datalist>
                 <br><br>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" id="submit">
             </fieldset>
         </form>
         <br>
         <!--A button to show a cute puppy picture once we can add in more functionality-->
-        <button>Press Me!</button>
+        <button id="btn1" onclick="show()">Press Me!</button>
+        <script>
+            function show() {
+                alert("Ouch!")
+            }
+        </script>
         <template>
             <h3>A cute puppy!</h3>
             <img src="puppy.png" width="400" height="500">
         </template>
     </main>
     <footer>
-        <p>Author: Tyler Culp</p>
+        <p id="author">Author: Tyler Culp</p>
         <p>Contact: <a href="mailto:tculp@ucsd.edu">tculp@ucsd.edu</a></p>
     </footer>
 </body>
