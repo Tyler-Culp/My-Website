@@ -1,0 +1,111 @@
+:root {
+    --color-header: hsl(20, 6%, 41%);
+    --color-left-sidebar: hsl(225, 70%, 72%);
+    --color-right-sidebar: hsl(225, 70%, 72%);
+    --color-main: hsl(202, 14%, 85%);
+    --color-footer: hsl(20, 6%, 41%);
+    --color-text: hsl(0, 0%, 100%);
+    --font: sans-serif "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+  }
+
+* {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: var(--font);
+    background-color: darkgray;
+    padding: .25rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: .5rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+
+a:hover {
+    transform: scale(1.2);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    padding: .5rem;
+}
+
+footer {
+    text-align: center;
+}
+
+#gitLink {
+    color: blue
+}
+
+main {
+    display: grid;
+    grid-column: 1fr 1fr 1fr 1fr;
+}
+
+ol {
+    padding: 1.5rem;
+}
+
+#pictures {
+    display:flex;
+    justify-content: space-around;
+}
+
+aside {
+    color: white;
+}
+
+.listP {
+    padding: .5rem;
+    background-color: white;
+    border: solid;
+    border-width: .5rem;
+}
+
+#author {
+    transform: translateY(.1in);
+}
+
+
+@media screen and (max-width: 640px) {
+
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        padding: .5rem;
+        font-size: 1rem;
+        transform: translateX(3in);
+    }
+
+    h1 {
+        transform: translateX(3in);
+    }
+    
+    a {
+        color: white;
+        text-decoration: none;
+        transition: transform 0.2s;
+      }
+    
+    a:hover {
+        transform: scale(1.2);
+    }
+
+    p {
+        padding: .3rem
+    }
+
+    #author {
+        transform: translateY(.1in);
+    }
+
+}
