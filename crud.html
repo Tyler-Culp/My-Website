@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="blog.js"></script>
+    <title>Blog</title>
+</head>
+<body>
+    <h1 id="header" >Blog posts</h1>
+    <ul id="blogList">
+        
+    </ul>
+    <p id="blogPosts"></p>
+    <button id="postBtn">Add Post</button>
+    <dialog id="dialog">
+        <form method="POST">
+            <label name="title">Title: </label>
+            <input id="titleInput" type="text" name="title">
+            <br><br>
+            <!-- <label name="date">Date: </label>
+            <input id="dateInput" type="date" name="date">
+            <br><br> -->
+            <label name="summary">Summary: </label>
+            <input id="summaryInput" type="text" name="summary">
+            <br><br>
+            <button id="submitBtn" onclick="addItem()">Post</button>
+        </form>
+    </dialog>
+</body>
+</html>
