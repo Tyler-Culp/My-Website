@@ -123,7 +123,7 @@ function resetLook() {
         listElements[i].style.padding = '1rem';
         listElements[i].style.maxWidth = '40rem';
 
-        let horizontalLine = document.createElement("hr");
+        //let horizontalLine = document.createElement("hr");
         listElements[i].appendChild(horizontalLine);
     }
 
