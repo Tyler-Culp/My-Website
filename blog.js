@@ -45,24 +45,6 @@ function editItem(index) {
     localStorage.setItem("blog-list", JSON.stringify(items));
 }
 
-function makeEdit() {
-    
-    // if (editIndex == null) {
-    //     alert("Can't find post");
-    // }
-
-    // let titleInput = document.getElementById("editTitleInput").value;
-    // let summaryInput = document.getElementById("editSummaryInput").value;
-    // items[editIndex] = null;
-    // items[editIndex] = {
-    //     title: titleInput,
-    //     date: new Date().toLocaleDateString("en-US"),
-    //     summary: summaryInput
-    // };
-    // editIndex = null;
-    // listItems();
-}
-
 function listItems() {
     let blogList = document.getElementById("blogList");
     blogList.innerHTML = "";
@@ -75,7 +57,21 @@ function listItems() {
 
         let liTag = document.createElement("li");
 
-        liTag.innerHTML = `${currTitle}, ${currDate}: <br> ${currSummary} <br> <button onclick=editItem(${i})>Edit</button> <button onclick=deleteItem(${i})>Delete</button>`;
+        liTag.innerHTML = `${currTitle}, ${currDate}: <br> ${currSummary} <br>`;
+        let editBtn = document.createElement("button");
+        let deleteBtn = document.createElement("button");
+
+        editBtn.setAttribute(`onclick`, `editItem(${i})`);
+        editBtn.setAttribute(`class`, `editBtns`);
+        editBtn.textContent = `Edit`;
+
+        deleteBtn.setAttribute(`onclick`, `deleteItem(${i})`);
+        deleteBtn.setAttribute(`class`, `deleteBtns`);
+        deleteBtn.textContent = `Delete`;
+
+        liTag.appendChild(editBtn);
+        liTag.appendChild(deleteBtn);
+
 
         blogList.appendChild(liTag);
     }
