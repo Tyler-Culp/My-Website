@@ -68,7 +68,7 @@ aside {
     padding: .5rem;
     background-color: white;
     border: solid;
-    border-width: .5rem;
+    border-width: 3px;
 }
 
 #author {

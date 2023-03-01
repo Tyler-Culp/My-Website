@@ -35,6 +35,12 @@ nav {
     padding: 1rem;
 }
 
+.paragraphs{
+    margin: 1rem;
+    border: solid 3px black;
+    background-color: white;
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -60,9 +66,7 @@ a:hover {
 
 #selfPicture {
     grid-column: 3 / 4;
-    /* border: solid; */
-    /* border-width: 5px;
-    border-color: white; */
+    margin: 10px;
 
 }
 
