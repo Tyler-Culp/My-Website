@@ -124,7 +124,7 @@ function resetLook() {
         listElements[i].style.maxWidth = '40rem';
 
         //let horizontalLine = document.createElement("hr");
-        listElements[i].appendChild(horizontalLine);
+        // listElements[i].appendChild(horizontalLine);
     }
 
     for (i = 0; i < editBtns.length; i++){
