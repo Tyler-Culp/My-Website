@@ -80,6 +80,10 @@ function listItems() {
 someObj.postBtnPressed = function() {
     let dLog = document.getElementById("dialog");
     dLog.showModal();
+
+    document.getElementById("titleInput").value = "";
+    document.getElementById("summaryInput").value = "";
+
 }
 
 
