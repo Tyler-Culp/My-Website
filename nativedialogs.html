@@ -23,33 +23,42 @@
         };
 
         someObj.confirmPressed = function () {
-            let didConfirm = confirm("Confirm Pressed");
             let outP = document.getElementById('outP');
-            outP.innerHTML = `Confirm result: ${didConfirm}`;
-            outP.hidden = false
+            outP.hidden = true;
+            setTimeout (function() {
+                let didConfirm = confirm("Confirm Pressed");
+                outP.innerHTML = `Confirm result: ${didConfirm}`;
+                outP.hidden = false
+            }, 0);
+            // outP.innerHTML = `Confirm result: ${didConfirm}`;
+            // outP.hidden = false
         };
 
         someObj.promptPressed = function () {
-            let thePrompt = prompt("What is your name?", "");
-            if (thePrompt === null || thePrompt ==="") {
-                thePrompt = "No name entered :(";
-            }
             let outP = document.getElementById('outP');
-            outP.innerHTML = `Prompt Result: ${thePrompt}`;
-            outP.hidden = false;
+            outP.hidden = true;
+            setTimeout (function() {
+                let thePrompt = prompt("What is your name?", "");
+                if (thePrompt === null || thePrompt ==="") {
+                    thePrompt = "No name entered :(";
+                }
+                outP.innerHTML = `Prompt Result: ${thePrompt}`;
+                outP.hidden = false;
+            }, 0);
         }
 
         someObj.saferPromptPressed = function () {
-            let saferPrompt = prompt("What is your name?", "");
-            if (saferPrompt === null || saferPrompt ==="") {
-                saferPrompt = "No name entered :(";
-            }
-            console.log(saferPrompt);
-            saferPrompt = DOMPurify.sanitize(saferPrompt);
-            console.log(saferPrompt);
             let outP = document.getElementById('outP');
-            outP.innerHTML = `Prompt Result: ${saferPrompt}`;
-            outP.hidden = false;
+            outP.hidden = true;
+            setTimeout (function() {
+                let saferPrompt = prompt("What is your name?", "");
+                if (saferPrompt === null || saferPrompt ==="") {
+                    saferPrompt = "No name entered :(";
+                }
+                saferPrompt = DOMPurify.sanitize(saferPrompt);
+                outP.innerHTML = `Prompt Result: ${saferPrompt}`;
+                outP.hidden = false;
+            }, 0)
         }
 
         window.addEventListener('load', function() {

@@ -6,36 +6,40 @@ someObj.alertPressed = function() {
 };
 
 someObj.confirmPressed = function () {
-    let Dlog = document.getElementById("dialog2");
-    Dlog.showModal();
-
     let outP = document.getElementById('outP');
-    outP.innerHTML = `Confirm result: ${didConfirm}`;
-    outP.hidden = false
+    outP.hidden = true;
+    setTimeout(function() {
+        let Dlog = document.getElementById("dialog2");
+        Dlog.showModal();
+    }, 0);
 };
 
 someObj.okBtn2Pressed = function() {
     let outP = document.getElementById("outP");
-    outP.innerText = "Confirm result: true";
+    outP.innerHTML = "Confirm result: true";
     outP.hidden = false;
 }
 
 someObj.cancelBtn2Pressed = function() {
     let outP = document.getElementById("outP");
-    outP.innerText = "Confirm result: false";
+    outP.innerHTML = "Confirm result: false";
     outP.hidden = false;
 }
 
 someObj.promptBtnPressed = function() {
-    let Dlog = document.getElementById("dialog3");
-    Dlog.showModal();
+    let outP = document.getElementById('outP');
+    outP.hidden = true;
+    setTimeout(function() {
+        let Dlog = document.getElementById("dialog3");
+        Dlog.showModal();
+    }), 0;
 }
 
 someObj.cancelBtn3Pressed = function() {
     let Dlog = document.getElementById("dialog3");
     Dlog.close();
     let outP = document.getElementById("outP");
-    outP.innerText = "No inputted name :(";
+    outP.innerHTML = "No inputted name :(";
     outP.hidden = false;
 }
 
@@ -44,9 +48,8 @@ someObj.okBtn3Pressed = function() {
     Dlog.close();
     let inputtedText = document.getElementById("inputtedName");
     let name = inputtedText.value;
-    // name = sanitize(name);
     let outP = document.getElementById("outP");
-    outP.innerText = `Prompt result: ${name}`;
+    outP.innerHTML = `Prompt result: ${name}`;
     outP.hidden = false;
 }
 
