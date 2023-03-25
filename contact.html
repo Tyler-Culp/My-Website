@@ -17,31 +17,15 @@
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-    <h1>Contact</h1>
-    <nav>
-        <!-- <ul>
-            <li>
-                <a href="index.html">About</a>
-            </li>
-            <li>
-                <a href="education.html">Education</a>
-            </li>
-            <li>
-                <a href="projects.html">Projects</a>
-            </li>
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-            <li>
-                <a href="miscellaneous.html">Miscellaneous</a>
-            </li>
-        </ul> -->
-        <a href="index.html">About</a>
-        <a href="education.html">Education</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
+    <header>
+        <h1>Contact</h1>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
     <main>
         <p>Thanks so much for wanting to contact me! Below is a contact form so that I can get in touch with you easier.</p>
         <form action="contact.html" method="get">
@@ -70,14 +54,16 @@
                 <br><br>
 
                 <label for="favorite_animal">Choose your favorite animal from the list:</label>
-                <input list="animals_list" name="favorite_animal" id="favorite_animal">
-                
-                <datalist id="animals_list">
-                    <option value="Dog">Dog</option>
-                    <option value="Cat">Cat</option>
-                    <option value="Fish">Fish</option>
-                    <option value="Bird">Bird</option>
-                </datalist>
+                <select name="favorite_animal" id="favorite_animal">
+                    <optgroup label="Animals">
+                        <option selected disabled value="None">None</option>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="bird">Bird</option>
+                        <option value="fish">Fish</option>
+                        <option value="other">Other</option>
+                    </optgroup>
+                </select>
                 <br><br>
                 <input type="submit" value="Submit" id="submit">
             </fieldset>
@@ -85,15 +71,18 @@
         <br>
         <!--A button to show a cute puppy picture once we can add in more functionality-->
         <button id="btn1" onclick="show()">Press Me!</button>
+        <div id="hiddenContainer">
+            <h3 hidden id="hiddenTitle">A cute puppy!</h3>
+            <img id="hiddenPicture" src="better_puppy.webp" alt="Picture of cute puppy" width="500" height="400" hidden>
+        </div>
         <script>
+            is_Hidden = true;
             function show() {
-                alert("Ouch!")
+                is_Hidden = !is_Hidden;
+                document.getElementById("hiddenTitle").hidden = is_Hidden;
+                document.getElementById("hiddenPicture").hidden = is_Hidden;
             }
         </script>
-        <template>
-            <h3>A cute puppy!</h3>
-            <img src="puppy.png" width="400" height="500">
-        </template>
     </main>
     <footer>
         <p id="author">Author: Tyler Culp</p>

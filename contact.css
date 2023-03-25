@@ -43,15 +43,14 @@ footer {
 }
 
 #submit {
-    background-color: rgb(216, 255, 88);
-    transition-property: background-color, height;
+    background-color: rgb(138, 236, 108);
+    transition-property: background-color;
     transition-delay: 1s;
     transition-duration: 3s;
 }
 
 #submit:hover {
     background-color: rgb(0, 185, 0);
-    height: 3rem;
 }
 
 p {
@@ -78,11 +77,18 @@ select {
 }
 
 #btn1 {
-    background-color: rgb(250, 76, 37);
+    background-color: rgb(76, 130, 231);
 }
 
 #author {
     transform: translateY(.2in);
+}
+
+#hiddenContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 640px) {
@@ -115,6 +121,13 @@ select {
 
     #author {
         transform: translateY(.1in);
+    }
+
+    #hiddenContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
 }
