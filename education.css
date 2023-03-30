@@ -156,8 +156,14 @@ h3 {
         transform: translateY(.05in);
     }
 
+    #topGrid {
+        display: flex;
+        flex-direction: column;
+    }
+
 
     #firstP {
+        margin-top: auto;
         border: 5px;
         border-style: solid;
         border-color: black;
@@ -165,11 +171,12 @@ h3 {
     }
     
     #table {
-        max-width: 100px;
+        max-width: auto;
         background-color: midnightblue;
         border: 5px;
         border-style: solid;
         border-color: black;
         background-color: white;
+        margin: .5rem;
     }
 }
